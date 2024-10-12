@@ -33,11 +33,6 @@
                </children>
             </HBox>
             <Button mnemonicParsing="false" onAction="#onHandleButtonRollTheDice" text="Jugar" />
-            <Button mnemonicParsing="false" onAction="#onHandleButtonShowInstructions" style="-fx-background-color: green;" text="Ayuda" textFill="WHITE">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Button>
          </children>
       </VBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" style="-fx-background-color: #000000;" GridPane.columnSpan="2">
@@ -47,7 +42,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 16; -fx-border-width: 2;" text="?" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#onHandleButtonShowInstructions" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 16; -fx-border-width: 2;" text="?" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
