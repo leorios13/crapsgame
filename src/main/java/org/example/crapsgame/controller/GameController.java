@@ -37,7 +37,7 @@ public class GameController {
         this.pointLabel.setText(String.valueOf(this.game1.getPoint()));
         this.shootLabel.setText(String.valueOf(this.game1.getShoot()));
         this.winLabel.setText(String.valueOf(0));
-        this.loseLabel.setText(String.valueOf(1));
+        this.loseLabel.setText(String.valueOf(0));
 
     }
 
