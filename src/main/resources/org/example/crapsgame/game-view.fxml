@@ -99,13 +99,13 @@
                         <Insets right="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="shotLabel1" alignment="CENTER" prefHeight="16.0" prefWidth="16.0" style="-fx-border-color: black;" GridPane.columnIndex="1" />
+                  <Label fx:id="winLabel" alignment="CENTER" prefHeight="16.0" prefWidth="16.0" style="-fx-border-color: black;" GridPane.columnIndex="1" />
                   <Label text="Juegos perdidos" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="pointLabel1" alignment="CENTER" prefHeight="16.0" prefWidth="16.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="loseLabel" alignment="CENTER" prefHeight="16.0" prefWidth="16.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </bottom>
