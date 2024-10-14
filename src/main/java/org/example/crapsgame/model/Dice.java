@@ -20,7 +20,7 @@ public class Dice {
     }
 
     public void rollDice() {
-        this.value = (int)(Math.random() * 6) + 1;
+        this.value = (int)(Math.random() * 7) + 1; //Se incluyó el número 7 para mostrar la excepción
         this.diceImage = new Image(
                 getClass().getResourceAsStream(PATH + "dice" + this.value + ".png")
         );
