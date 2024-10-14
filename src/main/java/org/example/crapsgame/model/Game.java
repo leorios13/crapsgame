@@ -51,7 +51,7 @@ public class Game {
             this.point = shoot;
         }
 
-        return this.lose;
+        return this.shoot;
     }
 
 }
