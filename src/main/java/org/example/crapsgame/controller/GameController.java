@@ -13,6 +13,9 @@ import java.util.ArrayList;
 
 public class GameController {
 
+    private int win_counter = 0;
+    private int lose_counter = 0;
+
     @FXML
     private Label pointLabel, shootLabel, winLabel, loseLabel;
 
@@ -39,8 +42,19 @@ public class GameController {
         this.dice2ImageView.setImage(this.dice2.getDiceImage());
         this.pointLabel.setText(String.valueOf(this.game1.getPoint()));
         this.shootLabel.setText(String.valueOf(this.game1.getShoot()));
-        this.winLabel.setText(String.valueOf(this.game1.isWin()));
-        this.loseLabel.setText(String.valueOf(this.game1.isLose()));
+        if (game1.isWin()){
+            win_counter++;
+            this.game1.setPoint(0);
+            this.game1.setShootCount(0);
+        }
+        if (game1.isLose()){
+            lose_counter++;
+            this.game1.setPoint(0);
+            this.game1.setShootCount(0);
+        }
+        this.winLabel.setText(String.valueOf(win_counter));
+        this.loseLabel.setText(String.valueOf(lose_counter));
+        System.out.println(game1.getShootCount());
 
     }
 
