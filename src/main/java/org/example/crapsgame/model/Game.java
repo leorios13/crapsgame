@@ -27,13 +27,12 @@ public class Game {
     }
 
     public boolean isWin() {
-        this.win = (shootCount == 1 && (shoot == 7 || shoot == 11)) || shoot == point;
-
+        this.win = (shootCount == 1 && (shoot == 7 || shoot == 11)) || (shootCount > 1 && shoot == point);
         return this.win;
     }
 
     public boolean isLose() {
-        this.lose = (shootCount == 1 && (shoot == 2 || shoot == 3 || shoot == 12)) || (shootCount != 1 && shoot == 7);
+        this.lose = (shootCount == 1 && (shoot == 2 || shoot == 3 || shoot == 12)) || (shootCount > 1 && shoot == 7);
         return this.lose;
     }
 
@@ -52,6 +51,14 @@ public class Game {
         }
 
         return this.shoot;
+    }
+
+    public void setPoint(int point) {
+        this.point = point;
+    }
+
+    public void setShootCount(int shootCount){
+        this.shootCount = shootCount;
     }
 
 }
