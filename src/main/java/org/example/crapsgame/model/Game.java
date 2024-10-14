@@ -28,6 +28,7 @@ public class Game {
 
     public boolean isWin() {
         this.win = (shootCount == 1 && (shoot == 7 || shoot == 11)) || shoot == point;
+
         return this.win;
     }
 
@@ -50,7 +51,7 @@ public class Game {
             this.point = shoot;
         }
 
-        return this.shoot;
+        return this.lose;
     }
 
 }

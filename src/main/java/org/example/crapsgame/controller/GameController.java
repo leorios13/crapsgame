@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import org.example.crapsgame.model.Dice;
 import org.example.crapsgame.model.Game;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import java.util.ArrayList;
 
@@ -40,6 +42,28 @@ public class GameController {
         this.winLabel.setText(String.valueOf(this.game1.isWin()));
         this.loseLabel.setText(String.valueOf(this.game1.isLose()));
 
+    }
+
+    @FXML
+    public void onHandleButtonShowInstructions(ActionEvent event) {
+
+        Alert alert = new Alert(AlertType.INFORMATION);
+
+
+        alert.setTitle("Instrucciones del Juego Craps");
+
+        alert.setHeaderText("Reglas Del Juego Craps:");
+
+
+        alert.setContentText(""
+                + "1. Si sacas un 7 o 11 en el primer tiro, ganas automáticamente.\n"
+                + "2. Si sacas un 2, 3 o 12, pierdes (Craps).\n"
+                + "3. Si sacas otro número (4, 5, 6, 8, 9, 10), ese será el 'punto'.\n"
+                + "4. Debes seguir tirando hasta sacar el mismo número del punto para ganar.\n"
+                + "5. Si sacas un 7 antes de igualar el punto, pierdes.");
+
+
+        alert.showAndWait();
     }
 
 }
